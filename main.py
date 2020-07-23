@@ -12,6 +12,8 @@ import os
 import base64
 import tornado.log
 
+from basehandler import BaseHandler
+
 define('port',default=9999,type=int,help="监听端口")
 define('host',default="0.0.0.0",type=str,help="host")
 
@@ -28,11 +30,11 @@ settings = {
     'template_path':template_path
 }
 
-class IndexHandler(RequestHandler):
+class IndexHandler(BaseHandler):
     def get(self, *args, **kwargs):
         self.render('index.html')
 
-class LoginHandler(RequestHandler):
+class LoginHandler(BaseHandler):
     def post(self, *args, **kwargs):
         pattern = re.compile("^[\u4E00-\u9FA5]{3,7}$")
         username = self.get_body_argument('username')
@@ -43,12 +45,13 @@ class LoginHandler(RequestHandler):
         else:
             self.redirect('/')
 
-class ChatHandler(RequestHandler):
+class ChatHandler(BaseHandler):
     def get(self, *args, **kwargs):
         ret = {}
         name = random.choice(the_list)
         self.set_secure_cookie('username', name)
         ret['username'] = name
+        print(11)
         self.render('chat.html',**ret)
 
 class ChatWebSocketHandler(WebSocketHandler):
