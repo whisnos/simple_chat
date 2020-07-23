@@ -59,8 +59,13 @@
 </body>
 <script>
     // 发送文本
-    $(function () {
+    $(function (event) {
         $('#send_btn').on('click',send_msg);
+        $("body").keydown(function(event) {
+             if (event.keyCode == 13) {//keyCode=13是回车键
+                 send_msg();
+             }
+         });
         function send_msg() {
             let send_msg = $('#send_msg');
             if (!Object.is("",send_msg.val())){
@@ -95,7 +100,7 @@
             }
         }
 
-        let ws = new WebSocket('ws://127.0.0.1/access');
+        let ws = new WebSocket('ws://127.0.0.1:9999/access');
         ws.onmessage = function (ev) {
             let msg_panel = $('#msg_panel')
             let data = $.parseJSON(ev.data);
