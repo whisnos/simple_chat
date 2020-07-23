@@ -79,3 +79,52 @@
 [I 180717 22:35:05 web:2106] 302 POST /login (127.0.0.1) 1.50ms
 [I 180717 22:35:05 web:2106] 200 GET /chat (127.0.0.1) 1.00ms
 [I 180717 22:35:05 web:2106] 101 GET /access (127.0.0.1) 1.00ms
+[I 200723 14:50:28 web:2250] 200 GET / (127.0.0.1) 2.00ms
+[I 200723 14:50:28 web:2250] 200 GET /static/css/bootstrap.min.css (127.0.0.1) 394.94ms
+[I 200723 14:50:28 web:2250] 200 GET /static/js/jquery-3.1.1.min.js (127.0.0.1) 1.00ms
+[I 200723 14:50:28 web:2250] 200 GET /static/js/bootstrap.min.js (127.0.0.1) 1.99ms
+[I 200723 14:50:28 web:2250] 200 GET /static/css/bootstrap-theme.css (127.0.0.1) 1.00ms
+[W 200723 14:50:28 web:2250] 404 GET /favicon.ico (127.0.0.1) 1.00ms
+[I 200723 14:51:36 web:2250] 302 POST /login (127.0.0.1) 2.99ms
+[I 200723 14:51:36 web:2250] 200 GET /chat (127.0.0.1) 1.00ms
+[I 200723 14:51:36 web:2250] 304 GET /static/css/bootstrap.min.css (127.0.0.1) 1.00ms
+[I 200723 14:51:36 web:2250] 304 GET /static/css/bootstrap-theme.css (127.0.0.1) 1.00ms
+[I 200723 14:51:36 web:2250] 304 GET /static/js/bootstrap.min.js (127.0.0.1) 1.00ms
+[I 200723 14:51:36 web:2250] 304 GET /static/js/jquery-3.1.1.min.js (127.0.0.1) 1.00ms
+[I 200723 14:51:36 web:2250] 101 GET /access (127.0.0.1) 0.00ms
+[I 200723 14:51:49 web:2250] 304 GET /chat (127.0.0.1) 1.00ms
+[I 200723 14:51:49 web:2250] 101 GET /access (127.0.0.1) 0.00ms
+[I 200723 14:52:02 web:2250] 200 GET /chat (127.0.0.1) 1.00ms
+[I 200723 14:52:02 web:2250] 200 GET /static/css/bootstrap.min.css (127.0.0.1) 1.99ms
+[I 200723 14:52:02 web:2250] 200 GET /static/css/bootstrap-theme.css (127.0.0.1) 1.00ms
+[I 200723 14:52:02 web:2250] 200 GET /static/js/jquery-3.1.1.min.js (127.0.0.1) 1.99ms
+[I 200723 14:52:02 web:2250] 200 GET /static/js/bootstrap.min.js (127.0.0.1) 0.00ms
+[I 200723 14:52:02 web:2250] 101 GET /access (127.0.0.1) 0.00ms
+[E 200723 14:52:06 web:1792] Uncaught exception GET /access (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1', method='GET', uri='/access', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "C:\Users\Administrator\Envs\test\lib\site-packages\tornado\websocket.py", line 649, in _run_callback
+        result = callback(*args, **kwargs)
+      File "E:/dev/chat/main.py", line 58, in on_message
+        + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+    AttributeError: 'NoneType' object has no attribute 'decode'
+[I 200723 14:52:19 web:2250] 200 GET / (127.0.0.1) 0.00ms
+[I 200723 14:52:26 web:2250] 302 POST /login (127.0.0.1) 1.00ms
+[I 200723 14:52:26 web:2250] 200 GET /chat (127.0.0.1) 1.00ms
+[I 200723 14:52:26 web:2250] 304 GET /static/css/bootstrap.min.css (127.0.0.1) 2.99ms
+[I 200723 14:52:26 web:2250] 304 GET /static/css/bootstrap-theme.css (127.0.0.1) 1.00ms
+[I 200723 14:52:26 web:2250] 304 GET /static/js/jquery-3.1.1.min.js (127.0.0.1) 1.00ms
+[I 200723 14:52:26 web:2250] 304 GET /static/js/bootstrap.min.js (127.0.0.1) 1.00ms
+[I 200723 14:52:26 web:2250] 101 GET /access (127.0.0.1) 0.00ms
+[I 200723 14:52:34 web:2250] 304 GET /chat (127.0.0.1) 1.00ms
+[I 200723 14:52:34 web:2250] 101 GET /access (127.0.0.1) 1.00ms
+[I 200723 14:52:36 web:2250] 304 GET /chat (127.0.0.1) 0.00ms
+[I 200723 14:52:36 web:2250] 101 GET /access (127.0.0.1) 0.00ms
+[I 200723 14:56:55 web:2250] 304 GET / (127.0.0.1) 0.99ms
+[I 200723 14:56:55 web:2250] 304 GET /static/css/bootstrap.min.css (127.0.0.1) 1.00ms
+[I 200723 14:56:55 web:2250] 304 GET /static/css/bootstrap-theme.css (127.0.0.1) 0.00ms
+[I 200723 14:56:55 web:2250] 304 GET /static/js/bootstrap.min.js (127.0.0.1) 0.00ms
+[I 200723 14:56:55 web:2250] 304 GET /static/js/jquery-3.1.1.min.js (127.0.0.1) 1.00ms
+[I 200723 14:56:59 web:2250] 302 POST /login (127.0.0.1) 1.00ms
+[I 200723 14:56:59 web:2250] 200 GET /chat (127.0.0.1) 1.00ms
+[I 200723 14:56:59 web:2250] 101 GET /access (127.0.0.1) 0.00ms
