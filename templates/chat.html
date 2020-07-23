@@ -71,6 +71,7 @@
             if (!Object.is("",send_msg.val())){
                 data = {};
                 data['type'] = "text";
+                data['username'] = {{ username }};
                 data['body'] = send_msg.val();
                 data = JSON.stringify(data);
                 ws.send(data);
@@ -92,6 +93,7 @@
                 reader.onload = function () {
                     data = {};
                     data['type'] = "pic";
+                    data['username'] = {{ username }};
                     data['body'] = this.result;
                     data = JSON.stringify(data);
                     ws.send(data);
